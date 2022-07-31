@@ -6,7 +6,8 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 
-public class TelesignScoreApi {
+public class TelesignScoreDto {
+    String uuid;
     String reference_id;
     String external_id;
     Status status;

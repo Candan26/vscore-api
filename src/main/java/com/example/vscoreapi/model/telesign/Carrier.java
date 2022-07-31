@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-
 public class Carrier {
     String name;
 }

@@ -44,11 +44,11 @@ public class GlobalExceptionHandler {
                 detail(DETAIL_UNPROCESSABLE_ENTITY).
                 request_id(requestId).
                 type(TYPE_UNPROCESSABLE_ENTITY).
-                invalid_parameters(VonageErrorMessage.InvalidParameters.builder().name("value").reason("invalid value").build()).
+                invalid_parameters(InvalidParameters.builder().name("value").reason("invalid value").build()).
                 build();
         return new ApiErrorResponse(new Date(),HttpStatus.UNPROCESSABLE_ENTITY.value(),vonageErrorMessage);
     }
-
+/*
     @ExceptionHandler(BusinessException.class)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public ApiErrorResponse handleUnAuthorizedException(String  requestId, BusinessException ex) {
@@ -110,4 +110,6 @@ public class GlobalExceptionHandler {
                 build();
         return new ApiErrorResponse(new Date(), HttpStatus.INTERNAL_SERVER_ERROR.value(),vonageErrorMessage);
     }
+
+ */
 }

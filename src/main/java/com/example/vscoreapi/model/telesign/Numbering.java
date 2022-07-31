@@ -6,42 +6,43 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 public class Numbering {
-    Original original;
-    Cleansing cleansing;
+    private Original original;
+    private Cleansing cleansing;
+
 
 
     @Data
     @RequiredArgsConstructor
-    private class Original {
-        String complete_phone_number;
-        String country_code;
-        String phone_number;
+    public class Original {
+        private String complete_phone_number;
+        private String country_code;
+        private String phone_number;
     }
 
     @Data
     @RequiredArgsConstructor
     private class Cleansing {
-        Call call;
-        Sms sms;
+        private Call call;
+        private Sms sms;
 
         @Data
         @RequiredArgsConstructor
         private class Call {
-            String country_code;
-            String phone_number;
-            Long cleansed_code;
-            Long min_length;
-            Long max_length;
+            private String country_code;
+            private String phone_number;
+            private Long cleansed_code;
+            private Long min_length;
+            private Long max_length;
         }
 
         @Data
         @RequiredArgsConstructor
         private class Sms {
-            String country_code;
-            String phone_number;
-            Long cleansed_code;
-            Long min_length;
-            Long max_length;
+            private String country_code;
+            private String phone_number;
+            private Long cleansed_code;
+            private Long min_length;
+            private Long max_length;
         }
     }
 

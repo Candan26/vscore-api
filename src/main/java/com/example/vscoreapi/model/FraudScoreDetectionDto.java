@@ -9,9 +9,8 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FraudScoreDetectionResponse implements Serializable {
-    private String request_uuid;
+public class FraudScoreDetectionDto implements Serializable {
     private String type;
-    private  Phone phone;
-    private FraudScore fraud_score;
+    private String value;
+    private String fraud_score;
 }
